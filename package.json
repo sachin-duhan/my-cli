@@ -1,20 +1,33 @@
 {
-  "name": "my-cli",
-  "version": "1.0.0",
-  "description": "Making your own CLI using NodeJs",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sachin-duhan26/my-cli.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sachin-duhan26/my-cli/issues"
-  },
-  "homepage": "https://github.com/sachin-duhan26/my-cli#readme"
+    "name": "@sachin_duhan/my-cli",
+    "version": "1.0.0",
+    "description": "Making your own CLI using NodeJs",
+    "main": "src/index.js",
+    "bin": {
+        "@sachin_duhan/duhan": "bin/create-project",
+        "duhan": "bin/create-project"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sachin-duhan26/my-cli.git"
+    },
+    "keywords": [
+        "cli",
+        "create-project"
+    ],
+    "author": "SACHIN DUHAN",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sachin-duhan26/my-cli/issues"
+    },
+    "homepage": "https://github.com/sachin-duhan26/my-cli#readme",
+    "dependencies": {
+        "esm": "^3.2.25"
+    }
 }

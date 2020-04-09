@@ -28,6 +28,7 @@
     },
     "homepage": "https://github.com/sachin-duhan26/my-cli#readme",
     "dependencies": {
-        "esm": "^3.2.25"
+        "esm": "^3.2.25",
+        "shelljs": "^0.8.3"
     }
 }

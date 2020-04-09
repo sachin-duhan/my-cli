@@ -1,10 +1,10 @@
 # my-cli
-Making your own CLI using NodeJs
+#### Making your own CLI using NodeJs
 
-![Alt Text](https://raw.github.com/{sachin-duhan26}/{my-cli}/{master}/{pubilc/guide.png})
+# PREVIEW
 
 <div align="center">
-    <img src="/public/guide.png" width="400px"/> 
+    <img src="/public/guide.png" width="auto"/> 
 </div>
 
 # AUTHOR

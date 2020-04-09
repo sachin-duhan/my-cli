@@ -1,5 +1,5 @@
-# my-cli
-#### Making your own CLI using NodeJs
+# PERSONALIZED CLI
+#### Making your own CLI - COMMAND LINE INTERFACE using NodeJs
 
 # PREVIEW
 

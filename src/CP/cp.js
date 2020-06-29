@@ -1,17 +1,16 @@
-// handling competitive programming shortcuts!
-
 const colors = require('colors');
+const fs = require('fs');
 const _name = require('../util').R_Number(10, 100);
 const cp_template = require('../util')._competitve_programming_template();
-const fs = require('fs');
 
-
-export function handle_cp(args) {
+export function handle_making_file(args) {
     let file_name = args[3] ? args[3] : `${_name}.cpp`;
-    fs.writeFileSync(file_name, cp_template, (err) => {
-        console.log(`${err}`.red);
+    const re = new RegExp('/*.cpp');
+    const data = Array.isArray(file_name.match(re)) ? cp_template : "";
+    fs.writeFileSync(file_name, data, (err) => {
+        if (err) console.log(`${err}`.red);
+        else console.log(`${file_name} created successfully!`.green);
     });
-    console.log(`${file_name} created successfully!`.green);
     process.exit(0);
 }
 

@@ -7,10 +7,12 @@ export function handle_making_file(args) {
     let file_name = args[3] ? args[3] : `${_name}.cpp`;
     const re = new RegExp('/*.cpp');
     const data = Array.isArray(file_name.match(re)) ? cp_template : "";
+    is_err = false;
     fs.writeFileSync(file_name, data, (err) => {
-        if (err) console.log(`${err}`.red);
-        else console.log(`${file_name} created successfully!`.green);
+        console.log(`${err}`.red);
+        is_err = true;
     });
+    if (!is_err) console.log(`${file_name} created successfully!`.green);
     process.exit(0);
 }
 

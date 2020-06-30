@@ -19,18 +19,18 @@ export function handle_making_file(args) {
 }
 
 export function run_file(args) {
-    console.log('handle running file here!'.red);
+    console.log('Will write this someother day!'.red);
     process.exit(0);
 }
 
 export function run_code(args) {
-    console.log(__dirname);
+    // console.log(__dirname);
     shell.exec('cd /home/sachin/Desktop/Practice && code . && google-chrome', {
         silent: true
     }, (error, stdout, stderr) => {
         if (stdout) console.log(stdout.blue);
         if (stderr) console.log(stderr.red);
         if (error) console.log(`Error Code : + ${error}`.red);
-        process.exit(0);
     });
+    process.exit(0);
 }

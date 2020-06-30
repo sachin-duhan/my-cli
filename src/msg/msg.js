@@ -38,10 +38,8 @@ _________________________________________________________________________
 
 export function handle_error(args) {
     console.log('OOPS! Invalid argument'.red);
-    rl.question("Enter 'Y' for more details - ", function saveInput(name) {
-        handle_user_input(name);
-        rl.close();
-    });
+    console.log(`Enter 'duhan help' for more details`.green);
+    process.exit(0);
 }
 
 function handle_user_input(input) {
@@ -62,7 +60,9 @@ _________________________________________________________________________
         5. RESTART                             - duhan restart
         6. LAUNCH STUDY MODE                   - duhan study
         7. Making a CP file                    - duhan cp [name]
-        8. Running a CP file                   - duhan run[name]
+        8. Running a CP file                   - duhan run [name]
+        9. Brightness adjustment for PC        - duhan dim [val]
+
     `.yellow);
     }
     process.exit(0);

@@ -8,5 +8,6 @@ export function cli(args) {
     else if (args[2] == 'run') _cp.run_file(args);
     else if (args[2] == "code") _cp.run_code(args);
     else if (args[2] == "shutdown") util.shutdown();
+    else if (args[2] == "dim") util.brightness_manager_for_external_monitor(args);
     else _p.handle_error(args);
 }

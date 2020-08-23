@@ -52,7 +52,6 @@ _________________________________________________________________________
 `.blue);
 
         console.log(`
-
         1. USE GIT                             - duhan git push -m '{{message}}'
         2. start VS code  & chrome             - duhan code
         3. run servers                         - duhan server {{server_name}}
@@ -62,7 +61,6 @@ _________________________________________________________________________
         7. Making a CP file                    - duhan cp [name]
         8. Running a CP file                   - duhan build [name]
         9. Brightness adjustment for PC        - duhan dim [val]
-
     `.yellow);
     }
     process.exit(0);

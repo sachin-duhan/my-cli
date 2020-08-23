@@ -55,12 +55,12 @@ _________________________________________________________________________
 
         1. USE GIT                             - duhan git push -m '{{message}}'
         2. start VS code  & chrome             - duhan code
-        3. run servers                         - duhan {{server_name}}
+        3. run servers                         - duhan server {{server_name}}
         4. SHUTDOWN PC                         - duhan shutdown
         5. RESTART                             - duhan restart
         6. LAUNCH STUDY MODE                   - duhan study
         7. Making a CP file                    - duhan cp [name]
-        8. Running a CP file                   - duhan run [name]
+        8. Running a CP file                   - duhan build [name]
         9. Brightness adjustment for PC        - duhan dim [val]
 
     `.yellow);

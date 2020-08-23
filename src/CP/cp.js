@@ -1,10 +1,7 @@
-import {
-    strict
-} from 'assert';
 const colors = require('colors');
 const fs = require('fs');
 const _name = require('../util').R_Number(10, 100);
-const cp_template = require('../util')._competitve_programming_template();
+const cp_template = require('./template')._competitve_programming_template;
 const shell = require('shelljs');
 
 export function handle_making_file(args) {
@@ -19,12 +16,11 @@ export function handle_making_file(args) {
 }
 
 export function run_file(args) {
-    console.log('Will write this someother day!'.red);
+    // console.log('Will write this someother day!'.red);
     process.exit(0);
 }
 
 export function run_code(args) {
-    // console.log(__dirname);
     shell.exec('cd /home/sachin/Desktop/Practice && code . && google-chrome', {
         silent: true
     }, (error, stdout, stderr) => {

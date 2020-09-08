@@ -47,6 +47,7 @@ const features_supported = [
     "Making basic CPP file               - duhan cpp [name]",
     "Running a CP file                   - duhan build [name]",
     "Brightness adjustment for PC        - duhan dim [val]",
+    "Toggle the lights of Keyboard       - duhan light [off]",
 ];
 
 export const handle_error = (args) => {

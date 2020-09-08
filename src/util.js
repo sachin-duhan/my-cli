@@ -29,3 +29,15 @@ export const shutdown = () => {
     });
     process.exit(0);
 };
+
+export const keywords = (args) => {
+    const mode = args[3] && args[3] == 'off' ? 'off' : 'on';
+    shell.exec(`xset led ${mode}`, {
+        silent: true
+    }, (error, stdout, stderr) => {
+        if (stdout) console.log(stdout.blue);
+        if (stderr) console.log(stderr.red);
+        if (error) console.log(`Error Code : + ${error}`.red);
+    });
+    process.exit(0);
+}

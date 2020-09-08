@@ -11,6 +11,7 @@ export function cli(args) {
     else if (args[2] == 'script') script.execute();
     else if (args[2] == "code") _cp.run_code(args);
     else if (args[2] == "shutdown") util.shutdown();
+    else if (args[2] == "light") util.keywords(args);
     else if (args[2] == "dim") util.brightness_manager_for_external_monitor(args);
     else _p.handle_error(args);
 }

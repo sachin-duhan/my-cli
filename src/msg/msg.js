@@ -6,7 +6,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-export function init() {
+export const init = () => {
     console.log(`
 _________________________________________________________________________
 
@@ -34,15 +34,28 @@ _________________________________________________________________________
         handle_user_input(name);
         rl.close();
     });
-}
+};
 
-export function handle_error(args) {
+const features_supported = [
+    "USE GIT                             - duhan git push -m '{{message}}'",
+    "start VS code  & chrome             - duhan code",
+    "run servers                         - duhan server {{server_name}}",
+    "SHUTDOWN PC                         - duhan shutdown",
+    "RESTART                             - duhan restart",
+    "LAUNCH STUDY MODE                   - duhan study",
+    "Making a CP file                    - duhan cp [name]",
+    "Making basic CPP file               - duhan cpp [name]",
+    "Running a CP file                   - duhan build [name]",
+    "Brightness adjustment for PC        - duhan dim [val]",
+];
+
+export const handle_error = (args) => {
     console.log('OOPS! Invalid argument'.red);
     console.log(`Enter 'duhan help' for more details`.green);
     process.exit(0);
 }
 
-function handle_user_input(input) {
+const handle_user_input = (input) => {
     if (input == 'Y' || input == 'yes' || input == 'y' || input == 'yeah') {
         console.log(`
 _________________________________________________________________________
@@ -50,18 +63,9 @@ _________________________________________________________________________
                             OVERVIEW and Commands Supported
 _________________________________________________________________________
 `.blue);
-
-        console.log(`
-        1. USE GIT                             - duhan git push -m '{{message}}'
-        2. start VS code  & chrome             - duhan code
-        3. run servers                         - duhan server {{server_name}}
-        4. SHUTDOWN PC                         - duhan shutdown
-        5. RESTART                             - duhan restart
-        6. LAUNCH STUDY MODE                   - duhan study
-        7. Making a CP file                    - duhan cp [name]
-        8. Running a CP file                   - duhan build [name]
-        9. Brightness adjustment for PC        - duhan dim [val]
-    `.yellow);
     }
+
+    // printing features here!
+    features_supported.forEach((feature, index) => console.log(`  ${index+1} - ${feature}`.yellow));
     process.exit(0);
 }

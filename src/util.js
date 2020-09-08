@@ -1,13 +1,13 @@
 const shell = require('shelljs');
 
-export function R_Number(min, max) {
+export const R_Number = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
     let val = Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
     return `code_${val}`;
 }
 
-export function brightness_manager_for_external_monitor(args) {
+export const brightness_manager_for_external_monitor = (args) => {
     let dim_val = args[3] ? args[3] : 0.7;
     shell.exec(`xrandr --output DP-1 --brightness ${dim_val}`, {
         silent: true
@@ -19,7 +19,7 @@ export function brightness_manager_for_external_monitor(args) {
     process.exit(0);
 }
 
-export function shutdown() {
+export const shutdown = () => {
     shell.exec('shutdown now', {
         silent: true
     }, (error, stdout, stderr) => {

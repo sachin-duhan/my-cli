@@ -5,7 +5,7 @@ export const R_Number = (min, max) => {
     max = Math.floor(max);
     let val = Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
     return `code_${val}`;
-}
+};
 
 export const brightness_manager_for_external_monitor = (args) => {
     let dim_val = args[3] ? args[3] : 0.7;
@@ -17,7 +17,7 @@ export const brightness_manager_for_external_monitor = (args) => {
         if (error) console.log(`Error Code : + ${error}`.red);
     });
     process.exit(0);
-}
+};
 
 export const shutdown = () => {
     shell.exec('shutdown now', {
@@ -28,4 +28,4 @@ export const shutdown = () => {
         if (error) console.log(`Error Code : + ${error}`.red);
     });
     process.exit(0);
-}
+};

@@ -6,6 +6,7 @@ const script = require('./scripts/index');
 export function cli(args) {
     if (args[2] == "help") _p.init();
     else if (args[2] == "cp") _cp.handle_making_file(args);
+    else if (args[2] == "cpp") _cp.make_basic_cpp_file(args);
     else if (args[2] == 'run') _cp.run_file(args);
     else if (args[2] == 'script') script.execute();
     else if (args[2] == "code") _cp.run_code(args);

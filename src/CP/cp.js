@@ -22,7 +22,7 @@ export const run_file = (args) => {
 };
 
 export const make_basic_cpp_file = (args) => {
-    let file_name = args[3] ? args[3] : `${_name}.cpp`;
+    let file_name = args[3] ? `${args[3]}.cpp` : `${_name}.cpp`;
     const data = basic_cpp_template;
     fs.writeFileSync(file_name, data, (err) => {
         console.log(`${err}`.red);

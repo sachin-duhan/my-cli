@@ -32,7 +32,10 @@ export const make_basic_cpp_file = (args) => {
 };
 
 export const run_code = (args) => {
-    shell.exec('cd /home/sachin/Desktop/Practice && code . && google-chrome', {
+    let exec_command = "cd /home/sachin/Desktop/Practice && code . ";
+    if (args[3] == 'c')
+        exec_command += "&& google-chrome";
+    shell.exec(exec_command, {
         silent: true
     }, (error, stdout, stderr) => {
         if (stdout) console.log(stdout.blue);

@@ -41,3 +41,14 @@ export const keywords = (args) => {
     });
     process.exit(0);
 }
+
+export const terminal_color = () => {
+    shell.exec(`source ~/.bashrc`, {
+        silent: true
+    }, (error, stdout, stderr) => {
+        if (stdout) console.log(stdout.blue);
+        if (stderr) console.log(stderr.red);
+        if (error) console.log(`Error Code : + ${error}`.red);
+    });
+    process.exit(0);
+}

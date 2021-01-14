@@ -14,6 +14,7 @@ export function cli(args) {
     else if (args[2] == "shutdown") util.shutdown();
     else if (args[2] == "git") git_helper(args);
     else if (args[2] == "light") util.keywords(args);
+    else if(args[2] == "terminal") util.terminal_color();
     else if (args[2] == "dim") util.brightness_manager_for_external_monitor(args);
     else _p.handle_error(args);
 }
